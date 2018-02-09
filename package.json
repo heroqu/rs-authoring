@@ -1,0 +1,25 @@
+{
+  "name": "pug2react",
+  "version": "0.0.1",
+  "description": "Convert pug pages into React components",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "keywords": ["pug", "react", "jsx", "convert"],
+  "author": "Heroqu",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-plugin-transform-react-pug": "^4.0.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "esformatter-asi": "^0.5.2",
+    "esformatter-jsx": "^8.0.1",
+    "gulp": "^3.9.1",
+    "gulp-babel-compile": "^0.0.3",
+    "gulp-esformatter": "^7.0.0",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-prettier-plugin": "^1.2.0",
+    "gulp-wrapper": "^1.0.0",
+    "prettier": "^1.10.2"
+  }
+}
