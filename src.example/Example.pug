@@ -1,17 +1,27 @@
-.Content
-  h1 Example
-  p
-    | This will be my component initially authored with pug.
-    | As you can see it's mostly text mixed with tags 
-    | and css class names.
-  Link(to="/home") go home
-  .Subnote
+Fragment
+  .Content
+    h1 Example
     p
-      | We've used Link tag at line 6, which is a React component 
-      | defined somewhere inside main react application.
-      | Before authoring one has to know the list of CSS styles and 
-      | special react components available and use only those.
-      | All the regular html tags are availbale too of course.
-    hr 
+      | This is authored in pug to end up as React JSX.
     p
-      | Not much harder then markdown, isn't it?
+      | As it is basically an html, one can use all regular html tags 
+      | and apply some css class names as is usually done in html.
+    p
+      | Interestingly, one can also use React components here 
+      | in a very similar way! Just make sure the mother site 
+      | is aware of of that and have them ready.
+    p
+      | Look at this:
+    Link(to="/home") go home
+    .Subnote
+      p
+        | - this was a Link tag, which is not an html, it is a name 
+        | of React component defined somewhere inside main react application.
+      p
+        | But before adding React component here, make sure the programmer 
+        | of the site did his/her homework of creating/installing them 
+        | inside the main app.        
+      p
+        | And the same is true is regard of CSS class names: first discuss 
+        | it with a person who runs the main site, so that those styles 
+        | would be accessible at the site run time.
