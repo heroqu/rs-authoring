@@ -1,6 +1,9 @@
 module.exports = {
-  src: 'src/*.pug',
-  dest: 'site/src/components/pages',
+  src: 'src',
+  // directory to store results locally
+  localDest: 'build',
+  // external directory to deliver the results finally
+  exportDest: '../site/src/components/pages',
   prettier: {
     printWidth: 80,
     tabWidth: 2,

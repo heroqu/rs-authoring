@@ -4,12 +4,18 @@
   "description": "Convert pug pages into React components",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "watch": "gulp watch"
   },
-  "keywords": ["pug", "react", "jsx", "convert"],
+  "keywords": [
+    "pug",
+    "react",
+    "jsx",
+    "convert"
+  ],
   "author": "Heroqu",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "babel-plugin-transform-react-pug": "^4.0.0",
     "babel-preset-stage-2": "^6.24.1",
     "esformatter-asi": "^0.5.2",
@@ -19,7 +25,9 @@
     "gulp-esformatter": "^7.0.0",
     "gulp-ext-replace": "^0.3.0",
     "gulp-prettier-plugin": "^1.2.0",
+    "gulp-text-simple": "^0.4.2",
     "gulp-wrapper": "^1.0.0",
-    "prettier": "^1.10.2"
+    "prettier": "^1.10.2",
+    "run-sequence": "^2.2.1"
   }
 }
