@@ -11,10 +11,17 @@ const CONFIG = require('./config')
 
 const reactTemplate = require('./lib/reactTemplate')
 
+const indexBuildDir = require('./lib/indexBuildDir')
+
 // adding import statements in jsx files
 const textTransformation = require('gulp-text-simple')
 const addImportStatements = require('./lib/addImportStatements')
 const importAdder = textTransformation(addImportStatements)
+
+gulp.task('indexBuildDir', cb => {
+  indexBuildDir(CONFIG.buildDir)
+  cb()
+})
 
 gulp.task('pug2react', () =>
   gulp
@@ -30,17 +37,17 @@ gulp.task('pug2react', () =>
     .pipe(esformatter(CONFIG.esformatter))
     .pipe(prettier(CONFIG.prettier))
     .pipe(replaceExt('.js'))
-    .pipe(gulp.dest(CONFIG.localDest))
+    .pipe(gulp.dest(CONFIG.buildDir))
 )
 
 gulp.task('export', () => {
   gulp
-    .src(`${path.resolve(CONFIG.localDest)}/**/*.js`)
-    .pipe(gulp.dest(CONFIG.exportDest))
+    .src(`${path.resolve(CONFIG.buildDir)}/**/*.js`)
+    .pipe(gulp.dest(CONFIG.exportDir))
 })
 
 gulp.task('author', cb => {
-  runSequence('pug2react', 'export', cb)
+  runSequence('pug2react', 'indexBuildDir', 'export', cb)
 })
 
 gulp.task('watch', function() {

@@ -1,9 +1,9 @@
 module.exports = {
-  src: 'src',
+  src: 'src/pages',
   // directory to store results locally
-  localDest: 'build',
+  buildDir: 'build',
   // external directory to deliver the results finally
-  exportDest: '../site/src/components/pages',
+  exportDir: '../site/src/components/pages',
   prettier: {
     printWidth: 80,
     tabWidth: 2,
