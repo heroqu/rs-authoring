@@ -1,8 +1,8 @@
 # Converter of pug pages into React components
 
-This setup is an infrastructural arrangement to facilitate authoring of regular static pages for the React site.
+This setup is an infrastructural arrangement to facilitate authoring of main content pages for the [mother React site application](https://github.com/heroqu/react-i18n-site).
 
-The idea is that initially each static page is to be edited as a `pug` (`jade`) file. Then a `gulp` task is to be run to convert all prepared pug files into React component files and store them into the React site's directory.
+The idea is that initially each page is to be edited as a `pug` (`jade`) file. Then, when authoring is over, the `gulp` task is to be run to convert all prepared pug files into React JSX files and copy them into the mother React site's directory.
 
 ## Usage
 
@@ -99,11 +99,11 @@ class About extends React.Component {
 
 We're almost done, but it looks ugly.
 
-- Prettify the file with Esformatter and then Prettier.
+- Prettify the file with `Esformatter` and then `Prettier`.
 
 Have to admit I wasn't able to attain the perfect formatting using each one of them just alone.
 
-Now we have perfectly formatted react component file:
+Now we have a perfectly formatted file with React component:
 
 ``` javascript
 import React from 'react'
