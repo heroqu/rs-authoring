@@ -54,4 +54,6 @@ gulp.task('watch', function() {
   gulp.watch('src/**/*.pug', ['author'])
 })
 
-gulp.task('default', ['author'])
+gulp.task('default', cb => {
+  runSequence('author', 'watch', cb)
+})
